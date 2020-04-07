@@ -38,6 +38,7 @@ public class Main {
             System.out.println();
         }
         for(Bowl bowl : bowls){
+            System.out.print("Колличество остатков еды в миске:");
             System.out.println(bowl.sizeEat);
         }
 

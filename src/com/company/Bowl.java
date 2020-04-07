@@ -47,7 +47,7 @@ public class Bowl {
                             System.out.println("Добавили максимум корма!");
                             sizeEat = size;
                             result = sizeEat - fedUp;
-                            if (result > 0) {
+                            if (result >= 0) {
                                 setSizeEat(result);
                                 return false;
                             } else
@@ -55,12 +55,11 @@ public class Bowl {
                         } else {
                             sizeEat = sizeEat + addEat;
                             result = sizeEat - fedUp;
-                            if (result > 0) {
+                            if (result >= 0) {
                                 setSizeEat(result);
                                 return false;
                             } else
                                 return true;
-//                            return result < 0;
                         }
                     case 2:
                         return true;
@@ -69,6 +68,8 @@ public class Bowl {
             }
             return true;
         }
+        result = sizeEat - fedUp;
+        setSizeEat(result);
         return false;
     }
 
